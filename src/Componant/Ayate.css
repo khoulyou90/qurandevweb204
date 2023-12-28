@@ -1,0 +1,25 @@
+.audio {
+    display: none;
+  }
+  
+  .visible {
+    display: block;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  .Ayate{
+    margin-top: 100px;
+  }
+
+  .container-text p{
+    margin-top: 1px;
+    padding: 10PX;
+    border-bottom: 2px solid #43a047;
+    
+  }
+  audio{
+    width: 100%;
+  }
+ 

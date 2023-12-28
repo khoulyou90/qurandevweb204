@@ -1,0 +1,412 @@
+/**************
+   Global Style
+***************/
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  font-family: 'cairo-bold';
+  outline: none;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+body {
+  direction: rtl;
+  background-image: url("/public/photo8.png");
+}
+
+ul, li {
+  list-style: none;
+}
+
+.container {
+  max-width: 1450px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 10px;
+}
+
+section {
+  padding: 70px;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background: transparent;
+  transition: 0.5s all ease-in-out;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  color: #fff;
+  transition: 0.5s all ease-in-out;
+}
+
+.header .active .container {
+  height: 80px;
+}
+
+.header ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header ul li {
+  position: relative;
+  cursor: pointer;
+}
+
+.header ul li::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  background-color: #fff;
+  height: 2px;
+  transition: 0.3s all ease-in-out;
+  width: 0;
+}
+
+.header ul li.active::after,
+.header ul li:hover::after {
+  width: 100%;
+}
+
+.header .bars {
+  display: none;
+}
+
+.header li:not(:first-of-type),
+.header li:not(:last-of-type) {
+  margin: 0 15px;
+}
+
+@media (max-width: 768px) {
+  .header{
+    transition: left 0.5s ease-in-out;
+  
+  }
+  .header .container {
+      height: auto;
+      padding: 10px;
+      width: 100%;
+      padding: 10px;
+   
+  }
+
+  .header ul {
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      right: 0;
+      background-color: #43a04886;
+      margin-top: 20px;
+      margin-right: 290px;
+      
+     
+    
+  }
+  
+  .header ul li{
+    padding: 10px;
+   
+  
+}
+
+
+  .header ul.show {
+      display: flex;
+  }
+
+  .header ul li {
+      margin: 10px 0;
+  }
+
+  .header ul li {
+      margin: 10px 0;
+  }
+
+  .header ul li a {
+      color: #fff;
+  }
+
+  .header .bars {
+      display: block;
+      cursor: pointer;
+  }
+
+  .surahcontainer .surah {
+      min-width: 100%;
+  }
+
+}
+
+.header .logo a {
+  font-family: 'thuluth-decorated';
+  font-size: 40px;
+  cursor: pointer;
+  color: #fff;
+  text-decoration: none;
+}
+
+.main {
+  background: url(/public/3.jpg) center center/cover no-repeat;
+  padding: 0;
+}
+
+.main .container {
+  min-height: 100vh;
+}
+
+.main .title {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+}
+
+.main .title h2 {
+  line-height: 1,9;
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+.title .btun {
+  border: 2px solid #fff;
+  background: transparent;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 400;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  position: relative;
+  transition: 0.3s all ease-in-out;
+  padding: 5px 15px;
+  text-decoration: none;
+}
+
+.title .btun i {
+  font-size: 25px;
+  margin-right: 20px;
+}
+
+.title .btun::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 0%;
+  height: 100%;
+  transition: 0.7s all ease-in-out;
+  background-color: #fff;
+  z-index: -1;
+}
+
+.title .btun:hover {
+  color: #232323;
+}
+
+.title .btun:hover::after {
+  width: 100%;
+}
+
+.default-navbar {
+  background-color: transparent;
+  transition: 0.3s ease;
+}
+
+.black-navbar {
+  background-color: #43a04886;
+  transition: 0.3s ease;
+  position: relative;
+}
+
+.black-navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+section h3 {
+  font-size: 30px;
+  text-align: center;
+  color: #43a047;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+section h3::after,
+section h3::before {
+  content: "";
+  position: absolute;
+  background-color: #43a047;
+  height: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+section h3::after {
+  width: 50px;
+  bottom: -20px;
+}
+
+section h3::before {
+  width: 100px;
+  bottom: -10px;
+}
+
+.hadithcontainer {
+  min-height: 350px;
+  position: relative;
+  box-shadow: 4px 4px 4px 0 #00000021 inset, -4px -4px 4px 0px #00000021 inset;
+  color: #232323;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
+  padding-top: 70px;
+  background: #ffffffe6;
+}
+
+.hadith .buttons div {
+  background: linear-gradient(60deg, #66bb62, #43a047);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, .14), 0 7px 10px -5px rgba(76, 175, 88, .4);
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.hadith .buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.hadith .buttons.number {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 10px 20px;
+  color: #43a047;
+  background: #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, .14), 0 7px 10px -5px rgba(0, 0, 0, 0.21) inset;
+}
+
+.container-lecture {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.container-lecture .right,
+.container-lecture .lift {
+  width: 48%;
+}
+
+.container-lecture .right .lec {}
+
+.container-lecture .right .lec:hover {
+  transform: scale(.95);
+}
+
+#lec {
+  border: 2px SOLID #2323234e;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  transition: .5s all ease-in-out;
+  cursor: pointer;
+}
+
+#lec:hover {
+  transform: scale(.95);
+}
+
+#lec-text {
+  width: calc(100% - 50px);
+  color: #232323b9;
+}
+
+#lec img {
+  width: 20px;
+  height: 150px;
+  object-fit: cover;
+}
+
+#lec-text h4 {
+  font-size: 20px;
+}
+
+#lec-text p {
+  font-size: 16px;
+}
+
+.container-lecture .Left iframe {
+  width: 100%;
+  height: 400px;
+  margin-top: 100px;
+  border-radius: 6px;
+}
+
+.container-lecture .Left {
+  position: sticky;
+  top: 0;
+}
+
+.active {}
+
+.logo .active {
+  border-bottom: 0px;
+}
+
+.surahcontainer {
+  justify-content: space-between;
+}
+
+.surahcontainer .surah {
+  min-height: 100px;
+  min-width: 150px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+  margin-bottom: 8px;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: .5s ease-in-out;
+  color: #232323;
+  font-size: 17px;
+  padding: 10px;
+}
+
+.surahcontainer .surah:hover {
+  transform: scale(1.05);
+}
+
+button a {
+  text-decoration: none;
+  color: #fff;
+}
+
+
